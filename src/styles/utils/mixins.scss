@@ -1,0 +1,71 @@
+@mixin container($max-width, $padding-x) {
+  width: min($max-width, 100% - ($padding-x * 2));
+  margin: 0 auto;
+  min-width: 20rem;
+  height: 100%;
+}
+
+@mixin css-horizontal-slider($max-breaking-point) {
+  @media (max-width: $max-breaking-point) {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    // Hide scrollbar
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // Edge
+    &::-webkit-scrollbar {
+      display: none; // Chrome, Edge, Opera, Safari, and other WebKit-based browsers
+    }
+    & > * {
+      flex-shrink: 0;
+      scroll-snap-align: center;
+      scroll-snap-stop: always;
+    }
+  }
+}
+
+@mixin customMinBreakPoint($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+// 480px
+@mixin smMinBreakPoint {
+  @media screen and (min-width: 30em) {
+    @content;
+  }
+}
+// 720px
+@mixin mdMinBreakPoint {
+  @media screen and (min-width: 45em) {
+    @content;
+  }
+}
+@mixin mdMaxBreakPoint {
+  @media screen and (max-width: 45em) {
+    @content;
+  }
+}
+// 960px
+@mixin lgMinBreakPoint {
+  @media screen and (min-width: 60em) {
+    @content;
+  }
+}
+@mixin lgMaxBreakPoint {
+  @media screen and (max-width: 60em) {
+    @content;
+  }
+}
+// 1280px
+@mixin xlMinBreakPoint {
+  @media screen and (min-width: 80em) {
+    @content;
+  }
+}
+@mixin xlMaxBreakPoint {
+  @media screen and (max-width: 80em) {
+    @content;
+  }
+}

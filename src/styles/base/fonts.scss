@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Involve";
+  src:
+    url("/src/assets/fonts/Involve-SemiBold.woff2") format("woff2"),
+    url("/src/assets/fonts/Involve-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Involve";
+  src:
+    url("/src/assets/fonts/Involve-Medium.woff2") format("woff2"),
+    url("/src/assets/fonts/Involve-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Involve";
+  src:
+    url("/src/assets/fonts/Involve-Regular.woff2") format("woff2"),
+    url("/src/assets/fonts/Involve-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Heuristica";
+  src:
+    url("/src/assets/fonts/Heuristica-Italic_0.woff2") format("woff2"),
+    url("/src/assets/fonts/Heuristica-Italic_0.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}

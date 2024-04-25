@@ -1,0 +1,120 @@
+.page {
+  &-main {
+    margin-bottom: clamp(48px, 4vw, 72px);
+  }
+  &-container {
+    @include container(1920px, var(--page-container-padding-x));
+  }
+}
+.centred {
+  &-block {
+    margin: 0 auto;
+  }
+  &-text {
+    text-align: center;
+  }
+}
+.flex {
+  display: flex;
+  &-column {
+    flex-direction: column;
+  }
+  &-between {
+    justify-content: space-between;
+  }
+  &-center {
+    align-items: center;
+  }
+}
+
+.bg {
+  &-color {
+    /* Light scheme */
+    &-light {
+      background-color: var(--color-light) !important;
+    }
+    &-accent-700 {
+      background-color: var(--color-accent-700);
+    }
+    // Font
+    &-light,
+    &-accent-700 {
+      color: var(--color-dark-500);
+    }
+  }
+}
+
+.text {
+  &-accent {
+    font-family: var(--font-family-accent);
+    color: var(--color-accent-500);
+    font-weight: 400;
+  }
+  &-color {
+    &-accent {
+      color: var(--color-accent);
+    }
+    &-secondary {
+      color: var(--color-medium);
+      .bg-color-light & {
+        color: rgb(105, 104, 109);
+      }
+    }
+    &-light {
+      color: var(--color-light);
+    }
+  }
+  &-align-center {
+    text-align: center;
+  }
+}
+.border-radius {
+  &-l {
+    border-radius: 16px;
+    @include xlMinBreakPoint {
+      border-radius: 32px;
+    }
+  }
+  &-m {
+    border-radius: 16px;
+  }
+}
+
+.font {
+  &-family-accent {
+    font-family: "Heuristica";
+  }
+  &-weight {
+    &-regular {
+      font-weight: 400;
+    }
+    &-semibold {
+      font-weight: 600;
+    }
+    &-medium {
+      font-weight: 500;
+    }
+  }
+  &-size {
+    &-text {
+      &-about {
+        font-size: clamp(24px, 2.2vw, 40px);
+        line-height: 1.4;
+      }
+    }
+    &-heading {
+      &-primary {
+        font-size: clamp(16px, 1.2vw, 22px);
+        line-height: 1.5;
+      }
+    }
+  }
+}
+.margin {
+  &-heading {
+    margin-bottom: 1rem;
+  }
+  &-section {
+    margin-bottom: clamp(80px, 8.5vw, 160px);
+  }
+}
