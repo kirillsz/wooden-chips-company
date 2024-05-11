@@ -71,9 +71,11 @@
     @include mdMinBreakPoint {
       row-gap: 48px;
       column-gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(2, minmax(300px, 1fr));
     }
     @include xlMinBreakPoint {
+      grid-template-columns: repeat(5, minmax(190px, 1fr));
+
       column-gap: 32px;
     }
     &__p {

@@ -41,7 +41,6 @@
     }
     @include customMinBreakPoint(60em) {
       &--video {
-        overflow: hidden;
         display: block;
       }
       &--img {
@@ -64,11 +63,10 @@
     }
     @include mdMinBreakPoint {
       padding: 24px;
-      bottom: 2rem;
+      bottom: 0;
       transform: translate(-50%, 0);
     }
     @include xlMinBreakPoint {
-      bottom: 0;
       font-size: clamp(80px, 6.85vw, 130px);
     }
   }

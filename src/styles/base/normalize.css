@@ -40,6 +40,8 @@ select {
 }
 button {
   cursor: pointer;
+  background-color: inherit;
+  border: unset;
 }
 p,
 h1,
