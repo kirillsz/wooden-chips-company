@@ -4,12 +4,15 @@
   align-items: center;
   justify-content: center;
   column-gap: 0.33rem;
-
+  transition: opacity 0.35s linear;
   padding: 1rem;
   @include mdMinBreakPoint {
     padding: 0.5rem;
   }
   &__logo {
     height: 0.75rem;
+  }
+  &:hover {
+    opacity: 0.6;
   }
 }

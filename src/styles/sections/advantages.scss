@@ -1,5 +1,17 @@
 @use "../abstracts/" as *;
 .advantages {
+  &__wrapper {
+    display: grid;
+
+    row-gap: 40px;
+    @include xlMinBreakPoint {
+      grid-template-columns: auto 1fr;
+      column-gap: 64px;
+    }
+    @include xxlMinBreakPoint {
+      column-gap: clamp(84px, 11vw, 201px);
+    }
+  }
   &__list {
     display: grid;
     row-gap: 0.5rem;
@@ -8,23 +20,63 @@
       column-gap: 1rem;
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+    @include xlMinBreakPoint {
+      width: 50vw;
+      max-width: 900px;
+      order: -1;
+    }
   }
   &__card {
     padding: 1rem 0.75rem 0.75rem 0.75rem;
+    min-height: 152px;
     @include mdMinBreakPoint {
       padding: 1rem;
-    }
-    &__img {
-      @include mdMinBreakPoint {
-        width: 59px;
-      }
-    }
-    &__p {
-      margin-top: 1.25rem;
+      min-height: 180px;
     }
   }
   &__3d {
-    display: flex;
-    justify-content: center;
+    &__img {
+      @include xlMaxBreakPoint {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+#advantages {
+  &__hqw {
+    width: 51px;
+    @include mdMinBreakPoint {
+      width: 59px;
+    }
+  }
+  &__eco {
+    width: 48px;
+    @include mdMinBreakPoint {
+      width: 55px;
+    }
+  }
+  &__dry {
+    width: 45px;
+    @include mdMinBreakPoint {
+      width: 52px;
+    }
+  }
+  &__compound {
+    width: 34px;
+    @include mdMinBreakPoint {
+      width: 39px;
+    }
+  }
+  &__readytouse {
+    width: 35px;
+    @include mdMinBreakPoint {
+      width: 40px;
+    }
+  }
+  &__nodust {
+    width: 48px;
+    @include mdMinBreakPoint {
+      width: 56px;
+    }
   }
 }
