@@ -1,0 +1,40 @@
+@use "../abstracts/" as *;
+.text {
+  &-main {
+    font-size: 1.125rem;
+    @include mdMinBreakPoint {
+      font-size: 1.25rem;
+    }
+  }
+  &-accent {
+    font-family: var(--font-family-accent);
+    color: var(--color-accent-500);
+    font-weight: 400;
+  }
+  &-color {
+    &-accident {
+      color: var(--color-accident);
+    }
+    &-accent {
+      color: var(--color-accent);
+    }
+    &-secondary {
+      color: var(--color-dark-100);
+    }
+    &-light {
+      color: var(--color-light);
+    }
+    &-clarify {
+      color: var(--color-medium);
+    }
+  }
+  &-align-center {
+    text-align: center;
+  }
+  &-break-point {
+    &::before {
+      content: "\a";
+      white-space: unset;
+    }
+  }
+}

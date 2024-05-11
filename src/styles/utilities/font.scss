@@ -1,0 +1,38 @@
+@use "../abstracts/" as *;
+.font {
+  &-family {
+    &-secondary {
+      font-family: var(--font-family-secondary);
+    }
+  }
+  &-weight {
+    &-regular {
+      font-weight: 400;
+    }
+    &-semibold {
+      font-weight: 600;
+    }
+    &-medium {
+      font-weight: 500;
+    }
+  }
+  &-size {
+    &-heading {
+      &-primary {
+        font-size: clamp(16px, 1.2vw, 22px);
+        line-height: 1.5;
+      }
+    }
+    &-125 {
+      font-size: 1.25rem;
+    }
+  }
+  &-italic {
+    font-style: italic;
+    &--mobile {
+      @include mdMinBreakPoint {
+        font-style: normal;
+      }
+    }
+  }
+}

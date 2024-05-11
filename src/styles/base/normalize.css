@@ -1,0 +1,57 @@
+/*
+  Kirillsz's template, based on Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+}
+body * {
+  line-height: calc(1em + 0.5rem);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+ol {
+  list-style: none;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  font-weight: unset;
+}
+#root,
+#__next {
+  isolation: isolate;
+}

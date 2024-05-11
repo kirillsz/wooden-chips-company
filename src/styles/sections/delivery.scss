@@ -1,0 +1,83 @@
+@use "../abstracts/" as *;
+.delivery {
+  &__heading {
+    margin-bottom: 1rem;
+    font-size: clamp(3rem, 13vw, 6rem);
+    @include mdMinBreakPoint {
+      margin-bottom: 2rem;
+    }
+  }
+  &__options {
+    @include css-slider(79em);
+    display: flex;
+    column-gap: clamp(54px, 5vw, 84px);
+    font-size: clamp(24px, 6.5vw, 40px);
+    padding: {
+      left: var(--page-container-padding-x);
+      right: var(--page-container-padding-x);
+    }
+    margin-bottom: 56px;
+
+    @media (min-width: 52em) {
+      margin: 0 auto 96px;
+      font-style: normal;
+    }
+    @include customMinBreakPoint(80em) {
+      width: fit-content;
+    }
+    @include xxlMinBreakPoint {
+      margin-bottom: 127px;
+    }
+
+    & li {
+      min-width: max-content;
+      &:not(:first-of-type) {
+        position: relative;
+        &::before {
+          --mark-size-ratio: 1;
+          content: "";
+          clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+          width: calc(10px * var(--mark-size-ratio));
+          height: calc(8px * var(--mark-size-ratio));
+          position: absolute;
+          top: 47.5%;
+          left: 0;
+          transform: translate(
+            calc(-30px * calc(var(--mark-size-ratio))),
+            -50%
+          );
+          background-color: rgba(109, 31, 9, 1);
+          @include lgMinBreakPoint {
+            --mark-size-ratio: 1.2;
+          }
+          @include xlMinBreakPoint {
+            --mark-size-ratio: 1.4;
+          }
+          @include xxlMinBreakPoint {
+            --mark-size-ratio: 1.6;
+          }
+          @media (min-width: 100em) {
+            --mark-size-ratio: 2;
+            transform: translate(-50px, -50%);
+          }
+        }
+      }
+    }
+  }
+  &__about {
+    padding-left: 0;
+    display: grid;
+    row-gap: 40px;
+    @include mdMinBreakPoint {
+      row-gap: 48px;
+      column-gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    @include xlMinBreakPoint {
+      column-gap: 32px;
+    }
+    &__p {
+      margin-top: 0.5rem;
+    }
+  }
+}

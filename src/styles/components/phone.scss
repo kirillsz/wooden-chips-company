@@ -1,0 +1,11 @@
+@use "../abstracts/" as *;
+.phone {
+  &-number {
+    font-size: clamp(2rem, 7.85vw, 3rem);
+    text-decoration: underline 2px;
+    text-underline-offset: 0.19em;
+    @include mdMaxBreakPoint {
+      font-style: italic;
+    }
+  }
+}

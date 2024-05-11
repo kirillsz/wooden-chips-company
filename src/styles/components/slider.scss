@@ -1,0 +1,31 @@
+@use "../abstracts/" as *;
+.slider {
+  &__wrapper {
+    position: relative;
+    @include customMinBreakPoint(75em) {
+      @include container(1920px, var(--page-container-padding-x));
+    }
+  }
+  &__dots {
+    display: flex;
+    column-gap: 4px;
+    padding: 0;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    @include mdMinBreakPoint {
+      display: none;
+    }
+  }
+  &__dot {
+    height: 4px;
+    width: 50px;
+    border-radius: 8px;
+    background-color: var(--color-light-300);
+    &.active {
+      background-color: #6d1f09;
+      animation: fadeOut 0.35s;
+    }
+  }
+}

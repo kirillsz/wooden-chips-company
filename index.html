@@ -1,13 +1,621 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/public/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/styles/style.scss" />
-    <title>Vr</title>
+    <link rel="stylesheet" href="/src/styles/main.scss" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/@splidejs/splide/dist/css/splide-core.min.css"
+    />
+    <title>Щепа</title>
   </head>
   <body>
+    <section class="entry header text-color-light">
+      <div class="container">
+        <div class="entry__wrapper">
+          <header class="entry-header flex flex-between w-100">
+            <img src="" alt="" />
+            <div class="phone flex align-center">
+              <a
+                class="phone-number font-family-secondary"
+                aria-label="Телефон горячей линии компании"
+                >8 123 456 78 90</a
+              >
+              <p class="phone-label">поможем <br />подобрать товар</p>
+            </div>
+          </header>
+          <picture>
+            <source
+              media="(max-width:460px)"
+              srcset="/src/assets/images/entry-bg-460w.png"
+              type="image/png"
+            />
+            <img
+              src="/src/assets/images/entry-bg-960w.png"
+              class="entry-background entry-background--img"
+              loading="lazy"
+              alt=""
+            />
+          </picture>
+          <video
+            class="entry-background entry-background--video"
+            autoplay
+            muted
+            loop
+          >
+            <source
+              src="/src/assets/video/company-video.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <h1 class="entry-heading font-family-secondary text-align-center">
+            Щепа для <span class="text-break-point"> бизнеса оптом</span>
+          </h1>
+        </div>
+      </div>
+    </section>
+    <main class="main">
+      <section class="products margin-section" id="products">
+        <div class="container">
+          <ul class="products__list">
+            <li class="products__item">
+              <div class="products__pile">
+                <img
+                  class="mx-auto"
+                  loading="lazy"
+                  src="/src/assets/images/olha-pile-900w.png"
+                  alt="Щепа 'Ольха' в большом количестве"
+                />
+              </div>
+              <div class="products__about">
+                <div class="products__card">
+                  <header class="products__header text-align-center">
+                    <span
+                      class="products__heading text-color-secondary font-family-secondary"
+                    >
+                      Ольха
+                    </span>
+                    <div class="products__sizes flex justify-center">
+                      <span class="products__size bg-accent br-4 font-size-125"
+                        >3–4 мм</span
+                      >
+                      <span class="products__size bg-accent br-4 font-size-125"
+                        >5–7 мм</span
+                      >
+                      <span class="products__size bg-accent br-4 font-size-125"
+                        >8–12 мм</span
+                      >
+                    </div>
+                  </header>
+                  <main class="products__main">
+                    <div class="splide">
+                      <div
+                        class="splide__track"
+                        role="group"
+                        aria-label="Карусель фотографий щепы 'Ольха'"
+                      >
+                        <ul class="splide__list">
+                          <li class="splide__slide">
+                            <picture>
+                              <source
+                                media="(max-width: 720px )"
+                                srcset="/src/assets/images/olha-solo-185w.png"
+                              />
+                              <img
+                                class="mx-auto"
+                                src="/src/assets/images/olha-solo-222w.png"
+                                alt="Щепа 'Ольха' в единичном экземпляре"
+                              />
+                            </picture>
+                          </li>
+                          <li class="splide__slide splide__slide--secondary">
+                            <img
+                              class="mx-auto"
+                              loading="lazy"
+                              src="/src/assets/images/product-olha-pile.png"
+                              alt="Щепа 'Ольха' в большом количестве"
+                            />
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </main>
+                  <footer class="products__footer flex">
+                    <div class="products__prices flex justify-center">
+                      <div class="flex flex-column">
+                        <span
+                          class="products__price font-italic font-family-secondary"
+                          >60 ₽</span
+                        >
+                        <span class="products__weight text-color-clarify"
+                          >за кг</span
+                        >
+                      </div>
+                      <div class="flex flex-column">
+                        <span
+                          class="products__price font-italic font-family-secondary"
+                          >30 ₽</span
+                        >
+                        <span class="products__weight text-color-clarify"
+                          >от 1 тонны</span
+                        >
+                      </div>
+                    </div>
+                    <p
+                      class="products__banner bg-accent br-4 text-color-secondary"
+                    >
+                      Крупный опт
+                      <span class="text-break-point">по договорной цене</span> 
+                    </p>
+                  </footer>
+                </div>
+              </div>
+            </li>
+            <li class="products__item">
+              <div class="products__pile">
+                <img
+                  class="mx-auto"
+                  loading="lazy"
+                  src="/src/assets/images/olha-pile-900w.png"
+                  alt="Щепа 'Ольха' в большом количестве"
+                />
+              </div>
+              <div class="products__about">
+                <div class="products__card">
+                  <header class="products__header text-align-center">
+                    <span
+                      class="products__heading text-color-secondary font-family-secondary"
+                    >
+                      Ольха
+                    </span>
+                    <div class="products__sizes flex justify-center">
+                      <span class="products__size bg-accent br-4 font-size-125"
+                        >3–4 мм</span
+                      >
+                      <span class="products__size bg-accent br-4 font-size-125"
+                        >5–7 мм</span
+                      >
+                      <span class="products__size bg-accent br-4 font-size-125"
+                        >8–12 мм</span
+                      >
+                    </div>
+                  </header>
+                  <main class="products__main">
+                    <div class="splide">
+                      <div
+                        class="splide__track"
+                        role="group"
+                        aria-label="Карусель фотографий щепы 'Ольха'"
+                      >
+                        <ul class="splide__list">
+                          <li class="splide__slide">
+                            <picture>
+                              <source
+                                media="(max-width: 720px )"
+                                srcset="/src/assets/images/olha-solo-185w.png"
+                              />
+                              <img
+                                class="mx-auto"
+                                src="/src/assets/images/olha-solo-222w.png"
+                                alt="Щепа 'Ольха' в единичном экземпляре"
+                              />
+                            </picture>
+                          </li>
+                          <li class="splide__slide splide__slide--secondary">
+                            <img
+                              class="mx-auto"
+                              loading="lazy"
+                              src="/src/assets/images/product-olha-pile.png"
+                              alt="Щепа 'Ольха' в большом количестве"
+                            />
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </main>
+                  <footer class="products__footer flex">
+                    <div class="products__prices flex justify-center">
+                      <div class="flex flex-column">
+                        <span
+                          class="products__price font-italic font-family-secondary"
+                          >60 ₽</span
+                        >
+                        <span class="products__weight text-color-clarify"
+                          >за кг</span
+                        >
+                      </div>
+                      <div class="flex flex-column">
+                        <span
+                          class="products__price font-italic font-family-secondary"
+                          >30 ₽</span
+                        >
+                        <span class="products__weight text-color-clarify"
+                          >от 1 тонны</span
+                        >
+                      </div>
+                    </div>
+                    <p
+                      class="products__banner bg-accent br-4 text-color-secondary"
+                    >
+                      Крупный опт
+                      <span class="text-break-point">по договорной цене</span> 
+                    </p>
+                  </footer>
+                </div>
+              </div>
+            </li>
+            <li class="products__item">
+              <div class="products__pile">
+                <img
+                  class="mx-auto"
+                  loading="lazy"
+                  src="/src/assets/images/olha-pile-900w.png"
+                  alt="Щепа 'Ольха' в большом количестве"
+                />
+              </div>
+              <div class="products__about">
+                <div class="products__card">
+                  <header class="products__header text-align-center">
+                    <span
+                      class="products__heading text-color-secondary font-family-secondary"
+                    >
+                      Ольха
+                    </span>
+                    <div class="products__sizes flex justify-center">
+                      <span class="products__size bg-accent br-4 font-size-125"
+                        >3–4 мм</span
+                      >
+                      <span class="products__size bg-accent br-4 font-size-125"
+                        >5–7 мм</span
+                      >
+                      <span class="products__size bg-accent br-4 font-size-125"
+                        >8–12 мм</span
+                      >
+                    </div>
+                  </header>
+                  <main class="products__main">
+                    <div class="splide">
+                      <div
+                        class="splide__track"
+                        role="group"
+                        aria-label="Карусель фотографий щепы 'Ольха'"
+                      >
+                        <ul class="splide__list">
+                          <li class="splide__slide">
+                            <picture>
+                              <source
+                                media="(max-width: 720px )"
+                                srcset="/src/assets/images/olha-solo-185w.png"
+                              />
+                              <img
+                                class="mx-auto"
+                                src="/src/assets/images/olha-solo-222w.png"
+                                alt="Щепа 'Ольха' в единичном экземпляре"
+                              />
+                            </picture>
+                          </li>
+                          <li class="splide__slide splide__slide--secondary">
+                            <img
+                              class="mx-auto"
+                              loading="lazy"
+                              src="/src/assets/images/product-olha-pile.png"
+                              alt="Щепа 'Ольха' в большом количестве"
+                            />
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </main>
+                  <footer class="products__footer flex">
+                    <div class="products__prices flex justify-center">
+                      <div class="flex flex-column">
+                        <span
+                          class="products__price font-italic font-family-secondary"
+                          >60 ₽</span
+                        >
+                        <span class="products__weight text-color-clarify"
+                          >за кг</span
+                        >
+                      </div>
+                      <div class="flex flex-column">
+                        <span
+                          class="products__price font-italic font-family-secondary"
+                          >30 ₽</span
+                        >
+                        <span class="products__weight text-color-clarify"
+                          >от 1 тонны</span
+                        >
+                      </div>
+                    </div>
+                    <p
+                      class="products__banner bg-accent br-4 text-color-secondary"
+                    >
+                      Крупный опт
+                      <span class="text-break-point">по договорной цене</span> 
+                    </p>
+                  </footer>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="products__request flex flex-between bg-secondary br-4">
+            <div class="products__request__about">
+              <p
+                class="products__request__heading font-family-secondary font-italic font-italic--mobile"
+              >
+                Другие породы дерева по запросу
+              </p>
+              <p class="text-color-clarify font-size-125">
+                осина, клён и другие
+              </p>
+            </div>
+            <div class="phone">
+              <a
+                href="tel:#"
+                class="phone-number font-family-secondary text-color-accident"
+                aria-label="Телефон горячей линии компании"
+                >8 123 456 78 90</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="delivery margin-section" id="delivery">
+        <header class="text-align-center">
+          <h2
+            class="delivery__heading font-family-secondary font-weight-regular"
+          >
+            Доставка
+          </h2>
+        </header>
+        <main>
+          <ul class="delivery__options">
+            <li class="font-family-secondary font-italic font-italic--mobile">
+              СДЭК
+            </li>
+            <li class="font-family-secondary font-italic font-italic--mobile">
+              Почта Росcии
+            </li>
+            <li class="font-family-secondary font-italic font-italic--mobile">
+              Деловые линии
+            </li>
+            <li class="font-family-secondary font-italic font-italic--mobile">
+              Энергия
+            </li>
+            <li class="font-family-secondary font-italic font-italic--mobile">
+              Самовывоз
+            </li>
+          </ul>
+
+          <ul class="delivery__about container">
+            <li class="delivery__about__item">
+              <img
+                class="delivery__about__img"
+                src="/src/assets/images/delivery-bill.svg"
+                alt=""
+              />
+              <p class="delivery__about__p text-main">
+                Оплата на расчётный счёт, банковскую карту или наличными
+              </p>
+            </li>
+            <li class="delivery__about__item">
+              <img
+                class="delivery__about__img"
+                src="/src/assets/images/delivery-track.svg"
+                alt=""
+              />
+              <p class="delivery__about__p text-main">
+                Отслеживание заказа по трек-номеру
+              </p>
+            </li>
+            <li class="delivery__about__item">
+              <img
+                class="delivery__about__img"
+                src="/src/assets/images/delivery-package.svg"
+                alt=""
+              />
+              <p class="delivery__about__p text-main">
+                Возможна фасовка в вашу брендированную тару
+              </p>
+            </li>
+            <li class="delivery__about__item">
+              <img
+                class="delivery__about__img"
+                src="/src/assets/images/delivery-map.svg"
+                alt=""
+              />
+              <p class="delivery__about__p text-main">
+                Отправка по всей России и СНГ
+              </p>
+            </li>
+            <li class="delivery__about__item">
+              <img
+                class="delivery__about__img"
+                src="/src/assets/images/delivery-wholesale.svg"
+                alt=""
+              />
+              <p class="delivery__about__p text-main">
+                Крупный опт только самовывоз
+              </p>
+            </li>
+          </ul>
+        </main>
+      </section>
+
+      <section class="advantages margin-section">
+        <div class="container">
+          <div class="advantages__wrapper">
+            <div class="advantages__3d" id="wooden-chip"></div>
+            <div class="advantages__list">
+              <div
+                class="advantages__card bg-secondary br-4 flex flex-column flex-between"
+              >
+                <img
+                  class="advantages__card__img"
+                  src="/src/assets/images/advantages-hqw.svg"
+                  width="51"
+                  alt="Схематичный рисунок: три идентичных древесных изделия, сложенных вместе"
+                />
+                <p class="advantages__card__p text-main">
+                  Отборная древесина. Без коры, гвоздей и плесени
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="recommendation margin-section">
+        <div class="container">
+          <header class="text-align-center">
+            <h2
+              class="recommendation__heading font-family-secondary font-weight-regular"
+            >
+              Рекомендации по хранению щепы
+            </h2>
+          </header>
+        </div>
+        <div class="slider__wrapper">
+          <ul class="recommendation__slider">
+            <li
+              class="recommendation__card flex flex-column flex-between bg-secondary br-4"
+              data-index="0"
+            >
+              <img
+                id="recommendation__container"
+                class="recommendation__img mx-auto"
+                src="/src/assets/images/recommendations-container.svg"
+                alt=""
+              />
+              <div class="recommendation__p">
+                <p
+                  class="recommendation__p__heading font-italic font-family-secondary"
+                >
+                  Сухое прохладное место
+                </p>
+                <p class="recommendation__p__text text-color-clarify">
+                  Храните щепу в сухом месте, защищённом от влаги и осадков
+                </p>
+              </div>
+            </li>
+            <li
+              class="recommendation__card flex flex-column flex-between bg-secondary br-4"
+              data-index="1"
+            >
+              <img
+                id="recommendation__fan"
+                class="recommendation__img mx-auto"
+                src="/src/assets/images/recommendations-fan.svg"
+                alt=""
+              />
+              <div class="recommendation__p">
+                <p
+                  class="recommendation__p__heading font-italic font-family-secondary"
+                >
+                  Сухое прохладное место
+                </p>
+                <p class="recommendation__p__text text-color-clarify">
+                  Храните щепу в сухом месте, защищённом от влаги и осадков
+                </p>
+              </div>
+            </li>
+            <li
+              class="recommendation__card flex flex-column flex-between bg-secondary br-4"
+              data-index="2"
+            >
+              <img
+                id="recommendation__pallet"
+                class="recommendation__img mx-auto"
+                src="/src/assets/images/recommendations-pallet.svg"
+                alt=""
+              />
+              <div class="recommendation__p">
+                <p
+                  class="recommendation__p__heading font-italic font-family-secondary"
+                >
+                  Сухое прохладное место
+                </p>
+                <p class="recommendation__p__text text-color-clarify">
+                  Храните щепу в сухом месте, защищённом от влаги и осадков
+                </p>
+              </div>
+            </li>
+          </ul>
+          <ul class="slider__dots">
+            <li class="slider__dot" data-index="0"></li>
+            <li class="slider__dot" data-index="1"></li>
+            <li class="slider__dot" data-index="2"></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="container">
+          <ul class="about__list">
+            <li class="about__item">
+              <p class="about__p font-family-secondary">
+                30-40 тонн всегда запас на складе
+              </p>
+            </li>
+            <li class="about__item">
+              <p class="about__p font-family-secondary">
+                Контроль качества на каждом этапе
+              </p>
+            </li>
+            <li class="about__item">
+              <p class="about__p font-family-secondary">
+                До 2 тонн щепы производим в сутки
+              </p>
+            </li>
+            <li class="about__item">
+              <p class="about__p font-family-secondary">
+                Современное оборудование
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__main bg-secondary">
+        <div class="container flex flex-column align-center text-align-center">
+          <nav class="footer__nav" aria-label="Навигация в подвале">
+            <ul class="footer__list">
+              <li class="text-main"><a href="#products">Продукция</a></li>
+              <li class="text-main"><a href="#delivery">Доставка</a></li>
+              <li class="text-main"><a href="">Производство</a></li>
+              <li class="text-main"><a href="">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="phone">
+            <a
+              href="tel:#"
+              class="phone-number font-family-secondary text-color-accident"
+              aria-label="Телефон горячей линии компании"
+              >8 123 456 78 90</a
+            >
+            <p class="phone__label">Поможем выбрать товар и оформим заказ</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a
+      href="https://faber-studio.com"
+      target="_blank"
+      aria-label="Узнать больше о студии Faber"
+      rel="noopener noreferrer"
+    >
+      <div id="studio-watermark">
+        <span>Сайт разработан студией</span>
+        <img
+          id="studio-watermark__logo"
+          src="/src/assets/images/faber-logo.svg"
+          alt=""
+        />
+      </div>
+    </a>
     <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>

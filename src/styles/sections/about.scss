@@ -1,0 +1,24 @@
+@use "../abstracts/" as *;
+.about {
+  &__list {
+    padding: 0;
+    display: grid;
+    row-gap: 2rem;
+    @include mdMinBreakPoint {
+      row-gap: 3.5rem;
+      column-gap: 1.5rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @include xlMinBreakPoint {
+      column-gap: clamp(1rem, 2vw, 3rem);
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  &__p {
+    font-style: italic;
+    font-size: 2rem;
+    @include xlMinBreakPoint {
+      font-size: clamp(2rem, 2.5vw, 3rem);
+    }
+  }
+}

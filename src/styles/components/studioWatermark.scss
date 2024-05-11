@@ -1,0 +1,15 @@
+@use "../abstracts/" as *;
+#studio-watermark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.33rem;
+
+  padding: 1rem;
+  @include mdMinBreakPoint {
+    padding: 0.5rem;
+  }
+  &__logo {
+    height: 0.75rem;
+  }
+}

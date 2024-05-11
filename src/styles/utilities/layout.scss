@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+.container {
+  @include container(1920px, var(--page-container-padding-x));
+}
+.header {
+  margin-bottom: clamp(32px, 7.5vw, 64px);
+}
+.main {
+  margin-bottom: 80px;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.w-100 {
+  width: 100%;
+}
+.br-4 {
+  border-radius: 4px;
+}
+.margin-section {
+  margin-bottom: 80px;
+}
+.translateY-centred {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}

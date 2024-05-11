@@ -1,0 +1,71 @@
+@use "../abstracts/" as *;
+.recommendation {
+  $sliderMaxBreakPoint: 75em;
+
+  &__heading {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    @include mdMinBreakPoint {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    @include xlMinBreakPoint {
+      margin-bottom: 3.5rem;
+    }
+  }
+  &__slider {
+    padding: {
+      left: var(--page-container-padding-x);
+      right: var(--page-container-padding-x);
+    }
+    @include css-slider($sliderMaxBreakPoint);
+    gap: 16px;
+    @include customMinBreakPoint($sliderMaxBreakPoint) {
+      display: flex;
+      padding: 0;
+      gap: 24px;
+    }
+  }
+  &__img {
+    margin-bottom: 48px;
+    @include xlMinBreakPoint {
+      margin-bottom: 32px;
+    }
+  }
+  &__card {
+    min-width: 100%;
+    padding: 1.5rem 1rem;
+    @include mdMinBreakPoint {
+      min-width: 72.5%;
+    }
+    @include customMinBreakPoint($sliderMaxBreakPoint) {
+      min-width: auto;
+    }
+  }
+  &__p {
+    &__heading {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    &__text {
+      @include mdMinBreakPoint {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+#recommendation {
+  &__pallet {
+    margin-top: clamp(66px, 5vw, 90px);
+  }
+  &__fan {
+    padding: {
+      top: 16px;
+      left: 32px;
+      right: 32px;
+    }
+  }
+  &__container {
+    margin-top: clamp(24px, 3.5vw, 42px);
+  }
+}

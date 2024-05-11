@@ -1,0 +1,8 @@
+.bg {
+  &-secondary {
+    background-color: var(--color-light-300);
+  }
+  &-accent {
+    background-color: var(--color-light-400);
+  }
+}
