@@ -5,7 +5,7 @@
 
     row-gap: 40px;
     @include xlMinBreakPoint {
-      grid-template-columns: 1fr auto;
+      grid-template-columns: minmax(auto, 900px) auto;
       column-gap: 64px;
     }
     @include xxlMinBreakPoint {
@@ -21,8 +21,6 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     @include xlMinBreakPoint {
-      width: 50vw;
-      max-width: 900px;
       order: -1;
     }
   }
@@ -41,7 +39,7 @@
       }
       @include xlMinBreakPoint {
         width: 32.5vw;
-        max-width: 100%;
+        max-width: 552px;
       }
     }
   }
