@@ -5,7 +5,7 @@
 
     row-gap: 40px;
     @include xlMinBreakPoint {
-      grid-template-columns: auto 1fr;
+      grid-template-columns: 1fr auto;
       column-gap: 64px;
     }
     @include xxlMinBreakPoint {
@@ -38,6 +38,10 @@
     &__img {
       @include xlMaxBreakPoint {
         margin: 0 auto;
+      }
+      @include xlMinBreakPoint {
+        width: 32.5vw;
+        max-width: 100%;
       }
     }
   }

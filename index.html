@@ -17,6 +17,7 @@
     <title>Quality Wood</title>
   </head>
   <body>
+    <div class="qw-loader"></div>
     <section class="entry header text-color-light">
       <div class="container">
         <div class="entry__wrapper">
@@ -115,7 +116,7 @@
                                 srcset="/src/assets/images/olha-solo-185w.png"
                               />
                               <img
-                                class="mx-auto"
+                                class="products__main__img mx-auto"
                                 src="/src/assets/images/olha-solo-222w.png"
                                 alt="Щепа 'Ольха' в единичном экземпляре"
                               />
@@ -208,7 +209,7 @@
                                 srcset="/src/assets/images/oak-solo-203w.png"
                               />
                               <img
-                                class="mx-auto"
+                                class="products__main__img mx-auto"
                                 src="/src/assets/images/oak-solo-304w.png"
                                 alt="Щепа 'Дуб' в единичном экземпляре"
                               />
@@ -304,7 +305,7 @@
                                 srcset="/src/assets/images/fruit-solo-141w.png"
                               />
                               <img
-                                class="mx-auto"
+                                class="products__main__img mx-auto"
                                 src="/src/assets/images/fruit-solo-216w.png"
                                 alt="Щепа 'Фруктовая' в единичном экземпляре"
                               />
@@ -458,7 +459,7 @@
         </main>
       </section>
 
-      <section class="advantages margin-section">
+      <section class="advantages margin-section" id="advantages">
         <div class="container">
           <div class="advantages__wrapper">
             <div class="advantages__3d" id="wooden-chip">
@@ -666,10 +667,21 @@
         <div class="container flex flex-column align-center text-align-center">
           <nav class="footer__nav" aria-label="Навигация в подвале">
             <ul class="footer__list">
-              <li class="text-main"><a href="#products">Продукция</a></li>
-              <li class="text-main"><a href="#delivery">Доставка</a></li>
-              <li class="text-main"><a href="">Производство</a></li>
-              <li class="text-main"><a href="">Контакты</a></li>
+              <li class="text-main">
+                <button class="scroll-into-view" data-scrolltoid="products">
+                  Продукция
+                </button>
+              </li>
+              <li class="text-main">
+                <button class="scroll-into-view" data-scrolltoid="delivery">
+                  Доставка
+                </button>
+              </li>
+              <li class="text-main">
+                <button class="scroll-into-view" data-scrolltoid="advantages">
+                  Качество
+                </button>
+              </li>
             </ul>
           </nav>
           <div class="phone">

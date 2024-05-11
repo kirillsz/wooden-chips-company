@@ -24,3 +24,14 @@ body {
   background-color: var(--color-light);
   color: var(--color-dark-500);
 }
+.qw-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 125vh;
+  z-index: 999;
+  overflow: hidden;
+  background-color: inherit;
+  transition: opacity 1s linear;
+}

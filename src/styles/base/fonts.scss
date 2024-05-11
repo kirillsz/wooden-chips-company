@@ -3,12 +3,12 @@
   src: url("/src/assets/fonts/DudkaRegular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: auto;
+  font-display: swap;
 }
 @font-face {
   font-family: "Golos";
   src: url("/src/assets/fonts/Golos-Text_Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }

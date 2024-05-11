@@ -44,8 +44,11 @@
 
   &__heading {
     display: block;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-size: 3rem;
+    @include xxlMinBreakPoint {
+      margin-bottom: 2rem;
+    }
   }
   &__decor {
     display: none;
@@ -56,7 +59,15 @@
   &__main {
     margin-bottom: 0.5rem;
     @media (min-width: 520px) {
-      margin-bottom: 4rem;
+      margin-bottom: 3rem;
+    }
+    &__img {
+      @include xlMinBreakPoint {
+        max-height: 255px;
+      }
+      @include xxlMinBreakPoint {
+        max-height: 100%;
+      }
     }
   }
   &__card {
