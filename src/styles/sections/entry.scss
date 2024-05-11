@@ -2,7 +2,18 @@
 .entry {
   $heading-fadeOut-duration: 4s;
   margin-top: var(--page-container-padding-x);
-
+  & .company__logo {
+    width: 96px;
+    @include mdMinBreakPoint {
+      width: 104px;
+    }
+    @include xlMinBreakPoint {
+      width: 114px;
+    }
+    @include xxlMinBreakPoint {
+      width: 100%;
+    }
+  }
   @include mdMinBreakPoint {
     margin-bottom: 80px;
   }
@@ -39,7 +50,6 @@
     }
   }
   &-heading {
-    animation: fadeOut $heading-fadeOut-duration;
     position: absolute;
     bottom: 50%;
     left: 50%;
@@ -54,18 +64,16 @@
     }
     @include mdMinBreakPoint {
       padding: 24px;
-      bottom: 0.25em;
+      bottom: 2rem;
       transform: translate(-50%, 0);
     }
     @include xlMinBreakPoint {
+      bottom: 0;
       font-size: clamp(80px, 6.85vw, 130px);
     }
   }
 
   & .phone {
-    $delay: 4s;
-    $phone-fadeOut-duration: 1.5s;
-    animation: fadeOut $phone-fadeOut-duration $heading-fadeOut-duration;
     column-gap: 0.8rem;
     &-number {
       font-style: normal;
