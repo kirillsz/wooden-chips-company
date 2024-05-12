@@ -8,23 +8,22 @@
     }
   }
   &__options {
-    @include css-slider(79em);
     display: flex;
     column-gap: clamp(54px, 5vw, 84px);
-    font-size: clamp(24px, 6.5vw, 40px);
+    font-size: clamp(24px, 6.5vw, 48px);
     padding: {
       left: var(--page-container-padding-x);
       right: var(--page-container-padding-x);
     }
-    margin-bottom: 56px;
+
+    width: fit-content;
+    margin: 0 auto 56px;
 
     @media (min-width: 52em) {
       margin: 0 auto 96px;
       font-style: normal;
     }
-    @include customMinBreakPoint(80em) {
-      width: fit-content;
-    }
+
     @include xxlMinBreakPoint {
       margin-bottom: 127px;
     }
