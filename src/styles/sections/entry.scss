@@ -25,7 +25,11 @@
   }
   &-header,
   &-heading {
-    padding: var(--page-container-padding-x);
+    padding: {
+      left: var(--page-container-padding-x);
+      right: var(--page-container-padding-x);
+      top: var(--page-container-padding-x);
+    }
   }
   &-header {
     position: absolute;
@@ -62,8 +66,7 @@
       }
     }
     @include mdMinBreakPoint {
-      padding: 24px;
-      bottom: 0;
+      bottom: 16px;
       transform: translate(-50%, 0);
     }
     @include xlMinBreakPoint {
