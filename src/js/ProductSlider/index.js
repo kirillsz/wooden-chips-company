@@ -5,6 +5,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
   for (var i = 0; i < elms.length; i++) {
     new Splide(elms[i], {
+      type: "loop",
       pagination: false,
       mediaQuery: "min",
       breakpoints: {
