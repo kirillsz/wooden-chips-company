@@ -20,10 +20,21 @@
   }
 
   .phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.5rem;
+    &-number {
+      width: fit-content;
+    }
     @include mdMaxBreakPoint {
-      width: 66.6vw;
     }
   }
   &__creator {
+  }
+  & .text-break-point {
+    @media (max-width: 520px) {
+      white-space: pre;
+    }
   }
 }

@@ -82,6 +82,11 @@
       @include mdMinBreakPoint {
         font-size: 2rem;
         font-style: italic;
+        padding-right: 0.07em;
+      }
+      &::before {
+        background-color: var(--color-light-300);
+        bottom: 0.1em;
       }
     }
     &-label {
