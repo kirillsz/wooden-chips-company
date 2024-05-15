@@ -5,13 +5,13 @@
   & .company__logo {
     width: 96px;
     @include mdMinBreakPoint {
-      width: 104px;
-    }
-    @include xlMinBreakPoint {
       width: 114px;
     }
+    @include xlMinBreakPoint {
+      width: 142px;
+    }
     @include xxlMinBreakPoint {
-      width: 100%;
+      width: 177px;
     }
   }
   @include mdMinBreakPoint {
