@@ -1,11 +1,30 @@
 @use "../abstracts/" as *;
 .phone {
   &-number {
+    overflow-x: hidden;
+    position: relative;
+
     font-size: clamp(2rem, 7.85vw, 3rem);
-    text-decoration: underline 2px;
-    text-underline-offset: 0.19em;
+    @media (hover: hover) {
+      &:hover {
+        &::before {
+          transform: translateX(110%);
+        }
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: var(--color-accident);
+      display: block;
+      height: 2px;
+      width: 100%;
+      bottom: 0;
+      transition: transform 0.35s ease-in-out;
+    }
     @include mdMaxBreakPoint {
       font-style: italic;
+      padding-right: 0.07em;
     }
   }
 }
