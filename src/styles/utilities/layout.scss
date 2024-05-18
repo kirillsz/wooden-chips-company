@@ -3,11 +3,12 @@
 .container {
   @include container(1920px, var(--page-container-padding-x));
 }
-.header {
-  margin-bottom: clamp(32px, 7.5vw, 64px);
-}
+
 .main {
   margin-bottom: 80px;
+  @include xlMinBreakPoint {
+    margin-bottom: clamp(80px, 6.25vw, 120px);
+  }
 }
 .mx-auto {
   margin-left: auto;
@@ -21,6 +22,12 @@
 }
 .margin-section {
   margin-bottom: 80px;
+  @include mdMinBreakPoint {
+    margin-bottom: 104px;
+  }
+  @include xlMinBreakPoint {
+    margin-bottom: clamp(104px, 8.5vw, 160px);
+  }
 }
 .translateY-centred {
   position: absolute;

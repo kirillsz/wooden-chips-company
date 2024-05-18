@@ -107,30 +107,14 @@
               <p class="phone-label">поможем <br />подобрать товар</p>
             </div>
           </header>
-          <picture>
-            <source
-              media="(max-width:460px)"
-              srcset="/src/assets/images/entry-bg-460w.png"
-              type="image/png"
-            />
-            <img
-              src="/src/assets/images/entry-bg-960w.png"
-              class="entry-background entry-background--img"
-              loading="lazy"
-              alt=""
-            />
-          </picture>
+
           <video
+            id="entry__video"
             class="entry-background entry-background--video"
             autoplay
             muted
             loop
-          >
-            <source
-              src="/src/assets/video/company-video.mp4"
-              type="video/mp4"
-            />
-          </video>
+          ></video>
           <h1 class="entry-heading font-family-secondary text-align-center">
             Щепа для <span class="text-break-point"> бизнеса оптом</span>
           </h1>
@@ -522,56 +506,166 @@
             </li>
           </ul>
 
-          <ul class="delivery__about container">
+          <ul class="delivery__about">
             <li class="delivery__about__item">
-              <img
-                class="delivery__about__img"
-                src="/src/assets/images/delivery-bill.svg"
-                alt=""
-              />
-              <p class="delivery__about__p text-main">
+              <div class="delivery__about__img" id="payment">
+                <svg
+                  width="66"
+                  height="42"
+                  viewBox="0 0 66 42"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.46991 3C0.46991 1.34315 1.81306 0 3.46991 0H62.5302C64.187 0 65.5302 1.34315 65.5302 3V39C65.5302 40.6569 64.187 42 62.5302 42H3.46991C1.81305 42 0.46991 40.6569 0.46991 39V3Z"
+                    fill="#331812"
+                  />
+                  <path
+                    d="M6.54224 22.7144C6.54224 21.0575 7.88538 19.7144 9.54224 19.7144H18.2892C19.9461 19.7144 21.2892 21.0575 21.2892 22.7144V25.2858C21.2892 26.9426 19.9461 28.2858 18.2892 28.2858H9.54224C7.88538 28.2858 6.54224 26.9426 6.54224 25.2858V22.7144Z"
+                    fill="#E95E2A"
+                  />
+                  <rect y="34" width="66" height="3" fill="#FAF6F0" />
+                </svg>
+              </div>
+
+              <p class="delivery__about__p">
                 Оплата на расчётный счёт, банковскую карту или наличными
               </p>
             </li>
             <li class="delivery__about__item">
-              <img
-                class="delivery__about__img"
-                src="/src/assets/images/delivery-track.svg"
-                alt=""
-              />
-              <p class="delivery__about__p text-main">
+              <div class="delivery__about__img">
+                <svg
+                  width="79"
+                  height="56"
+                  viewBox="0 0 79 56"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 3C0 1.34315 1.34315 0 3 0H53.2963C54.9531 0 56.2963 1.34315 56.2963 3V45.5602C56.2963 47.217 54.9531 48.5602 53.2963 48.5602H3C1.34315 48.5602 0 47.217 0 45.5602V3Z"
+                    fill="#331812"
+                  />
+                  <ellipse
+                    cx="58.2716"
+                    cy="38.6497"
+                    rx="15.8025"
+                    ry="15.8564"
+                    fill="#FAF6F0"
+                  />
+                  <rect
+                    x="25.679"
+                    width="5.92592"
+                    height="28.7397"
+                    fill="#E95E2A"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M70.1885 45.6908C71.4023 43.6269 72.0987 41.22 72.0987 38.65C72.0987 30.9874 65.9081 24.7756 58.2716 24.7756C50.635 24.7756 44.4444 30.9874 44.4444 38.65C44.4444 46.3126 50.635 52.5243 58.2716 52.5243C61.8637 52.5243 65.1358 51.1499 67.5943 48.8966L75.6469 55.3731C76.0772 55.7193 76.7055 55.6501 77.0502 55.2185L78.3758 53.5591C78.7205 53.1276 78.6511 52.4972 78.2207 52.151L70.1885 45.6908Z"
+                    fill="#331812"
+                  />
+                  <ellipse
+                    cx="58.2716"
+                    cy="38.6505"
+                    rx="9.87654"
+                    ry="9.91024"
+                    fill="#FAF6F0"
+                  />
+                </svg>
+              </div>
+
+              <p class="delivery__about__p">
                 Отслеживание заказа по трек-номеру
               </p>
             </li>
             <li class="delivery__about__item">
-              <img
-                class="delivery__about__img"
-                src="/src/assets/images/delivery-package.svg"
-                alt=""
-              />
-              <p class="delivery__about__p text-main">
+              <div class="delivery__about__img">
+                <svg
+                  width="44"
+                  height="72"
+                  viewBox="0 0 44 72"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.06947 5.12347C0.995233 4.5268 1.46055 4 2.06182 4H42.7976C43.3988 4 43.8641 4.5268 43.7899 5.12347L39.9636 35.8765C39.9534 35.9585 39.9534 36.0415 39.9636 36.1235L43.7899 66.8765C43.8641 67.4732 43.3988 68 42.7976 68H2.06182C1.46055 68 0.995233 67.4732 1.06947 66.8765L4.89581 36.1235C4.90601 36.0415 4.90601 35.9585 4.89581 35.8765L1.06947 5.12347Z"
+                    fill="#331812"
+                  />
+                  <rect
+                    x="14.9297"
+                    y="26"
+                    width="16"
+                    height="26"
+                    rx="2"
+                    fill="#E95E2A"
+                  />
+                  <rect
+                    x="0.929688"
+                    y="8.99994"
+                    width="43"
+                    height="2"
+                    fill="#FAF6F0"
+                  />
+                </svg>
+              </div>
+
+              <p class="delivery__about__p">
                 Возможна фасовка в вашу брендированную тару
               </p>
             </li>
             <li class="delivery__about__item">
-              <img
-                class="delivery__about__img"
-                src="/src/assets/images/delivery-map.svg"
-                alt=""
-              />
-              <p class="delivery__about__p text-main">
-                Отправка по всей России и СНГ
-              </p>
+              <div class="delivery__about__img">
+                <svg
+                  width="92"
+                  height="72"
+                  viewBox="0 0 92 72"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21.2642 24.1464L24.7358 27.2196L22.566 30.7318L32.9811 34.244H64.6604L75.9434 28.0976L81.1509 29.4147L84.6226 25.9025L90.2642 23.7074L92 25.9025L91.1321 28.0976L92 32.0489L89.3962 40.3903L91.1321 43.9025L90.6981 51.3659L84.6226 39.9513L84.1887 44.3415L77.2453 47.8537L75.9434 53.122L78.1132 54.0001L81.5849 59.7074V72.0001L75.9434 69.3659L77.2453 62.7806L73.7736 64.0976L66.3962 59.7074L64.6604 64.0976L57.717 65.8537L49.4717 62.7806L47.3019 64.9757L45.1321 62.7806L40.3585 64.0976L34.717 57.0732H31.6792L29.9434 54.0001L24.7358 52.244L21.2642 55.3172L16.4906 50.4879H11.283L12.5849 54.0001L6.50943 58.3903L0 49.6098V46.0976L3.4717 47.8537L7.81132 46.0976L6.50943 40.3903L8.67924 34.244L14.3208 30.7318L21.2642 24.1464Z"
+                    fill="#331812"
+                  />
+                  <path
+                    d="M32.1132 16.4782C32.1132 32.9855 44.2642 44.7805 49.4717 49.405C54.6793 44.7805 67.4851 28.7709 67.2642 16.4782C65.0944 -6.79009 32.1132 -4.15594 32.1132 16.4782Z"
+                    fill="#E95E2A"
+                  />
+                  <path
+                    d="M56.8491 15.805C56.8491 19.927 52.2442 23.7075 48.1698 23.7075C44.0954 23.7075 41.2264 21.244 41.2264 17.1221C41.2264 13.0002 45.3973 9.65869 49.4717 9.65869C53.5461 9.65869 56.8491 11.6831 56.8491 15.805Z"
+                    fill="#FAF6F0"
+                  />
+                </svg>
+              </div>
+
+              <p class="delivery__about__p">Отправка по всей России и СНГ</p>
             </li>
             <li class="delivery__about__item">
-              <img
-                class="delivery__about__img"
-                src="/src/assets/images/delivery-wholesale.svg"
-                alt=""
-              />
-              <p class="delivery__about__p text-main">
-                Крупный опт только самовывоз
-              </p>
+              <div class="delivery__about__img">
+                <svg
+                  width="86"
+                  height="56"
+                  viewBox="0 0 86 56"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 3C0 1.34315 1.34315 0 3 0H53C54.6569 0 56 1.34315 56 3V47H3C1.34314 47 0 45.6569 0 44V3Z"
+                    fill="#331812"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M70.3735 8H58V47H83C84.6569 47 86 45.6569 86 44V30.3907C86 29.8094 85.8312 29.2407 85.514 28.7536L72.8875 9.36298C72.3339 8.51278 71.3881 8 70.3735 8ZM72.3772 17H65C63.3431 17 62 18.3431 62 20V27C62 28.6569 63.3431 30 65 30H80.6514C81.446 30 81.9232 29.1179 81.4883 28.4528L74.8881 18.3583C74.334 17.5108 73.3897 17 72.3772 17Z"
+                    fill="#EA6836"
+                  />
+                  <circle cx="19.5" cy="47.5" r="8.5" fill="#331812" />
+                  <circle cx="69.5" cy="47.5" r="8.5" fill="#331812" />
+                  <circle cx="69.5" cy="47.5" r="4.5" fill="#FAF6F0" />
+                  <circle cx="19.5" cy="47.5" r="4.5" fill="#FAF6F0" />
+                </svg>
+              </div>
+
+              <p class="delivery__about__p">Крупный опт только самовывоз</p>
             </li>
           </ul>
         </main>
@@ -747,7 +841,7 @@
         </div>
       </section>
 
-      <section class="about margin-section">
+      <section class="about">
         <div class="container">
           <ul class="about__list">
             <li class="about__item">
@@ -778,16 +872,22 @@
             <nav class="footer__nav" aria-label="Навигация в подвале">
               <ul class="footer__list">
                 <li class="text-main">
-                  <a href="#products"> Продукция </a>
+                  <a class="anchor anchor-internal" href="#products">
+                    Продукция
+                  </a>
                 </li>
                 <li class="text-main">
-                  <a href="#delivery"> Доставка </a>
+                  <a class="anchor anchor-internal" href="#delivery">
+                    Доставка
+                  </a>
                 </li>
                 <li class="text-main">
-                  <a href="#advantages"> Качество </a>
+                  <a class="anchor anchor-internal" href="#advantages">
+                    Качество
+                  </a>
                 </li>
                 <li class="text-main">
-                  <a href="/contacts">Контакты</a>
+                  <a class="anchor" href="/contacts">Контакты</a>
                 </li>
               </ul>
             </nav>

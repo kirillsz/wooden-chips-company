@@ -1,3 +1,4 @@
+import "./EntryVideoLoader";
 import "./Loader";
 import "./ProductSlider";
 import "./RecomendationSlider";

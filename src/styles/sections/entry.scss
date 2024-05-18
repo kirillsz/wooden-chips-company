@@ -2,6 +2,14 @@
 .entry {
   $heading-fadeOut-duration: 4s;
   margin-top: var(--page-container-padding-x);
+  margin-bottom: 9vw;
+  @include mdMinBreakPoint {
+    margin-bottom: 80px;
+  }
+  @include xxlMinBreakPoint {
+    margin-bottom: 96px;
+  }
+
   & .company__logo {
     width: 96px;
     @include mdMinBreakPoint {
@@ -14,12 +22,7 @@
       width: 177px;
     }
   }
-  @include mdMinBreakPoint {
-    margin-bottom: 80px;
-  }
-  @include xxlMinBreakPoint {
-    margin-bottom: 96px;
-  }
+
   &__wrapper {
     position: relative;
   }
@@ -39,16 +42,10 @@
   &-background {
     position: relative;
     &--video {
-      display: none;
-    }
-    &--img {
-    }
-    @include customMinBreakPoint(60em) {
-      &--video {
-        display: block;
-      }
-      &--img {
-        display: none;
+      &--tablet {
+        @include mdMinBreakPoint {
+          display: none;
+        }
       }
     }
   }

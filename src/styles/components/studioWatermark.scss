@@ -1,6 +1,7 @@
 @use "../abstracts/" as *;
 .studio-watermark {
-  background-color: #e5dbca;
+  background-color: #260342;
+  color: #faf6f0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,9 +13,12 @@
   }
   &__logo {
     background-color: inherit;
+    & path {
+      fill: #faf6f0;
+    }
     height: 0.75rem;
   }
   &:hover {
-    opacity: 0.6;
+    opacity: 0.7;
   }
 }

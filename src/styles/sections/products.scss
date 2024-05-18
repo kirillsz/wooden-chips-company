@@ -71,9 +71,7 @@
       }
     }
   }
-  &__card {
-    margin-top: 1.5rem;
-  }
+
   &__sizes {
     gap: 0.5rem;
   }
@@ -140,9 +138,6 @@
       }
     }
     &__arrows {
-      @media (max-width: 520px) {
-        max-width: 328px;
-      }
       width: 100%;
       position: absolute;
       z-index: 1;
