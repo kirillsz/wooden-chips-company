@@ -15,8 +15,13 @@ main {
   @include container(1920px, var(--page-container-padding-x));
 }
 iframe {
-  @include mdMaxBreakPoint {
-    height: 515px;
+  height: 50vh;
+  @include mdMinBreakPoint {
+    height: 70vh;
+  }
+  @include xlMinBreakPoint {
+    height: 85vh;
+    max-height: 800px;
   }
 }
 .header {
