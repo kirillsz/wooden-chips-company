@@ -1,6 +1,6 @@
 @use "../abstracts/" as *;
 .studio-watermark {
-  background-color: #260342;
+  background-color: #331812;
   color: #faf6f0;
   display: flex;
   align-items: center;
@@ -10,6 +10,9 @@
   padding: 1rem;
   @include mdMinBreakPoint {
     padding: 0.5rem;
+  }
+  @include xlMinBreakPoint {
+    margin-bottom: clamp(32px, 2.5vw, 48px);
   }
   &__logo {
     background-color: inherit;
