@@ -1,11 +1,39 @@
-import * as THREE from "three";
-import { OBJLoader, OrbitControls } from "three/examples/jsm/Addons.js";
+import {
+  WebGLRenderer,
+  RepeatWrapping,
+  TextureLoader,
+  MeshStandardMaterial,
+  Scene,
+  PerspectiveCamera,
+  PointLight,
+  Matrix4,
+  Vector3,
+} from "three";
+import { OBJLoader } from "three/examples/jsm/Addons.js";
 
 const CAMERA_DISTANCE = 550;
 const CAMERA_FOV = 5;
 
+let isTouchDevice;
+
+function checkForTouchDevice() {
+  if (window.matchMedia("(pointer: coarse)").matches) {
+    isTouchDevice = true;
+  }
+}
+checkForTouchDevice();
+let rotationSlowCoefficient = 0.05;
+
 let rendererSizeW = window.innerWidth;
 let rendererSizeH = rendererSizeW;
+
+let targetRotation = 0;
+let targetRotationOnPointerDown = 0;
+
+let pointerX = 0;
+let pointerXOnPointerDown = 0;
+
+let windowHalfX = window.innerWidth / 2;
 
 desktop();
 function desktop() {
@@ -21,64 +49,62 @@ function desktop() {
     }
   }
 }
-
-const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+const renderer = new WebGLRenderer({ antialias: true, alpha: true });
 renderer.setSize(rendererSizeW, rendererSizeH);
 renderer.setPixelRatio(window.devicePixelRatio);
 
-const color = new THREE.TextureLoader().load(
+const color = new TextureLoader().load(
   "models/chipa/textures/chip-texture_COLOR.png"
 );
-color.wrapS = THREE.RepeatWrapping;
-color.wrapT = THREE.RepeatWrapping;
-color.repeat.set(200, 133);
-color.offset.set(0, -0.2);
-const bump = new THREE.TextureLoader().load(
+color.wrapS = color.wrapT = RepeatWrapping;
+color.repeat.set(9, 7);
+const bump = new TextureLoader().load(
   "models/chipa/textures/Текстура щепы_DISP.png"
 );
-bump.wrapS = THREE.RepeatWrapping;
-bump.wrapT = THREE.RepeatWrapping;
-bump.repeat.set(200, 200);
-bump.offset.set(0, 0.1);
-const ao = new THREE.TextureLoader().load(
+bump.wrapS = RepeatWrapping;
+bump.wrapT = RepeatWrapping;
+bump.repeat.set(12, 7);
+//bump.offset.set(0, 0.1);
+const ao = new TextureLoader().load(
   "models/chipa/textures/Текстура щепы_OCC.png"
 );
-ao.wrapS = THREE.RepeatWrapping;
-ao.wrapT = THREE.RepeatWrapping;
-ao.repeat.set(200, 200);
-ao.offset.set(0, 0.1);
-const material = new THREE.MeshStandardMaterial({
+ao.wrapS = RepeatWrapping;
+ao.wrapT = RepeatWrapping;
+ao.repeat.set(12, 7);
+//ao.offset.set(0, 0.1);
+const material = new MeshStandardMaterial({
   map: color,
   aoMap: ao,
-  aoMapIntensity: 0.5,
+  aoMapIntensity: 1,
   bumpMap: bump,
-  bumpScale: 15,
 });
 
 const canvas = document.getElementById("wooden-chip");
 canvas.appendChild(renderer.domElement);
+renderer.domElement.classList.add("advantages__3d__model");
+canvas.addEventListener("pointerdown", onPointerDown);
 
-const scene = new THREE.Scene();
+const scene = new Scene();
 
-const camera = new THREE.PerspectiveCamera(CAMERA_FOV, 1, 1, 1000);
+const camera = new PerspectiveCamera(CAMERA_FOV, 1, 1, 750);
 camera.position.set(4, 5, CAMERA_DISTANCE);
 
-const fillLight = new THREE.PointLight(0xf2f8ff, 13000, 0, 1.45);
+const fillLight = new PointLight(0xf2f8ff, 11000, 0, 1.55);
 fillLight.position.set(250, -200, 400);
 scene.add(fillLight);
 
-const keyLight = new THREE.PointLight(0xfffbf2, 700, 0, 1.45);
+const keyLight = new PointLight(0xfffbf2, 700, 0, 1.45);
 keyLight.position.set(-15, 5, 50);
 scene.add(keyLight);
 
-const backLight = new THREE.PointLight(0xf2f8ff, 9000, 0, 1.45);
+const backLight = new PointLight(0xf2f8ff, 9000, 0, 1.45);
 backLight.position.set(-200, 180, -70);
 scene.add(backLight);
 
 var globalModel;
 const loader = new OBJLoader().setPath("models/");
 loader.load(
-  "chipa2_3.obj",
+  "shepa_2.5.obj",
   (model) => {
     globalModel = model;
     globalModel.scale.set(2, 1.65, 2);
@@ -94,22 +120,56 @@ loader.load(
   (error) => {}
 );
 
-/* Mouse track */
+function onPointerDown(event) {
+  if (event.isPrimary === false) return;
 
-let mouseX;
-let mouseY;
+  event.preventDefault();
 
-let targetX;
-let targetY;
+  renderer.domElement.classList.add("is_dragging");
+  document.body.classList.add("is_dragging");
 
-// const windowHalfX = canvas.clientWidth / 2;
-// const windowHalfY = canvas.clientHeight / 2;
-// let targetRotation = new THREE.Vector2();
-// let currentRotation = new THREE.Vector2();
-// let rotationSpeed = 0.001;
-// var prevStateX;
-// var prevStateY;
+  pointerXOnPointerDown = event.clientX - windowHalfX;
+  targetRotationOnPointerDown = targetRotation;
 
+  document.addEventListener("pointermove", onPointerMove);
+  document.addEventListener("pointerup", onPointerUp);
+}
+
+function onPointerMove(event) {
+  if (event.isPrimary === false) return;
+
+  event.preventDefault();
+
+  pointerX = event.clientX - windowHalfX;
+
+  targetRotation =
+    targetRotationOnPointerDown + (pointerX - pointerXOnPointerDown) * 0.02;
+}
+
+function onPointerUp() {
+  if (event.isPrimary === false) return;
+
+  renderer.domElement.classList.remove("is_dragging");
+  document.body.classList.remove("is_dragging");
+
+  document.removeEventListener("pointermove", onPointerMove);
+  document.removeEventListener("pointerup", onPointerUp);
+}
+
+function animate() {
+  requestAnimationFrame(animate);
+  render();
+}
+
+animate();
+
+function render() {
+  if (globalModel) {
+    globalModel.rotation.y +=
+      (targetRotation - globalModel.rotation.y) * rotationSlowCoefficient;
+  }
+  renderer.render(scene, camera);
+}
 window.addEventListener("resize", () => {
   function onResize() {
     camera.updateProjectionMatrix();
@@ -118,9 +178,3 @@ window.addEventListener("resize", () => {
     renderer.setPixelRatio(window.devicePixelRatio);
   }
 });
-function animate() {
-  renderer.render(scene, camera);
-  requestAnimationFrame(animate);
-}
-
-animate();

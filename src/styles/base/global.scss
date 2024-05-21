@@ -35,3 +35,8 @@ body {
   background-color: inherit;
   transition: opacity 1s linear;
 }
+.is_dragging {
+  @media (pointer: fine) {
+    cursor: grabbing;
+  }
+}

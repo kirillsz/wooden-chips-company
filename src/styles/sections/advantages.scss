@@ -35,6 +35,10 @@
     }
   }
   &__3d {
+    touch-action: none;
+    @media (pointer: fine) {
+      cursor: grab;
+    }
     @include xlMaxBreakPoint {
       display: flex;
       justify-content: center;
