@@ -6,22 +6,12 @@ import {
   Scene,
   PerspectiveCamera,
   PointLight,
-  Matrix4,
-  Vector3,
 } from "three";
 import { OBJLoader } from "three/examples/jsm/Addons.js";
 
 const CAMERA_DISTANCE = 550;
 const CAMERA_FOV = 5;
 
-let isTouchDevice;
-
-function checkForTouchDevice() {
-  if (window.matchMedia("(pointer: coarse)").matches) {
-    isTouchDevice = true;
-  }
-}
-checkForTouchDevice();
 let rotationSlowCoefficient = 0.05;
 
 let rendererSizeW = window.innerWidth;
@@ -103,22 +93,17 @@ scene.add(backLight);
 
 var globalModel;
 const loader = new OBJLoader().setPath("models/");
-loader.load(
-  "shepa_2.5.obj",
-  (model) => {
-    globalModel = model;
-    globalModel.scale.set(2, 1.65, 2);
-    globalModel.position.set(4, 4.25, 0);
-    globalModel.traverse((child) => {
-      if (child.isMesh) {
-        child.material = material;
-      }
-    });
-    scene.add(globalModel); // Добавить модель на сцену
-  },
-  (xhr) => {},
-  (error) => {}
-);
+loader.load("shepa_2.5.obj", (model) => {
+  globalModel = model;
+  globalModel.scale.set(2, 1.65, 2);
+  globalModel.position.set(4, 4.25, 0);
+  globalModel.traverse((child) => {
+    if (child.isMesh) {
+      child.material = material;
+    }
+  });
+  scene.add(globalModel); // Добавить модель на сцену
+});
 
 function onPointerDown(event) {
   if (event.isPrimary === false) return;
