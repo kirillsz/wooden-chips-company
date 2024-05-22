@@ -5,7 +5,6 @@ window.addEventListener("DOMContentLoaded", function () {
   const navMenuList = document.querySelector(".qw-nav__list");
   const navMenuToggleButton = document.querySelector(".qw-nav__toggle");
 
-  function handleMenuState() {}
   function handleMenuShow() {
     navMenu.dataset.hidden = "false";
     navMenuList.classList.remove("hide");
