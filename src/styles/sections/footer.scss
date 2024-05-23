@@ -30,21 +30,10 @@
     @include mdMaxBreakPoint {
     }
   }
-  &__creator {
-  }
+
   & .text-break-point {
     @media (max-width: 520px) {
       white-space: pre;
-    }
-  }
-  .anchor {
-    transition: opacity 0.3s ease-in-out;
-    &:hover {
-      opacity: 0.7;
-    }
-    &-internal {
-      text-decoration: underline #665552 dashed;
-      text-underline-offset: 0.35em;
     }
   }
 }

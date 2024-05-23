@@ -22,7 +22,16 @@
       width: 177px;
     }
   }
-
+  &__nav {
+    @media (max-width: 1224px) {
+      display: none;
+    }
+    align-self: center;
+    &__list {
+      display: flex;
+      column-gap: clamp(32px, 3.3vw, 64px);
+    }
+  }
   &__wrapper {
     position: relative;
   }
