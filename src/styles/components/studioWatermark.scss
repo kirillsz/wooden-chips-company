@@ -1,12 +1,14 @@
 @use "../abstracts/" as *;
 .studio-watermark {
+  $hover-animation: 0.25s linear;
   background-color: #331812;
-  color: #faf6f0;
+  color: var(--color-light);
+  border-radius: 0 0 4px 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   column-gap: 0.33rem;
-  transition: opacity 0.35s linear;
+  transition: color $hover-animation;
   padding: 1rem;
   margin-bottom: 1rem;
   @include mdMinBreakPoint {
@@ -19,11 +21,17 @@
   &__logo {
     background-color: inherit;
     & path {
+      transition: fill $hover-animation;
       fill: #faf6f0;
     }
     height: 0.75rem;
   }
-  &:hover {
-    opacity: 0.7;
+  @media (hover: hover) {
+    &:hover {
+      color: var(--color-accident);
+      .studio-watermark__logo path {
+        fill: var(--color-accident);
+      }
+    }
   }
 }

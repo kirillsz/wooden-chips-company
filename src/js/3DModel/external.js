@@ -6,6 +6,7 @@ import {
   Scene,
   PerspectiveCamera,
   PointLight,
+  Vector2,
 } from "three";
 import { OBJLoader } from "three/examples/jsm/Addons.js";
 
@@ -61,12 +62,22 @@ const ao = new TextureLoader().load(
 ao.wrapS = RepeatWrapping;
 ao.wrapT = RepeatWrapping;
 ao.repeat.set(12, 7);
+
+const normal = new TextureLoader().load(
+  "models/chipa/textures/chip-texture_NRM.png"
+);
+normal.wrapS = RepeatWrapping;
+normal.wrapT = RepeatWrapping;
+normal.repeat.set(12, 7);
+const normalScaleVector = new Vector2(1.5, 1.5);
 //ao.offset.set(0, 0.1);
 const material = new MeshStandardMaterial({
   map: color,
   aoMap: ao,
   aoMapIntensity: 1,
   bumpMap: bump,
+  normalMap: normal,
+  normalScale: normalScaleVector,
 });
 
 const canvas = document.getElementById("wooden-chip");

@@ -90,6 +90,36 @@
         }
         height: clamp(75px, 75em, 85px);
       }
+      #payment {
+        width: 3.75rem;
+        @include mdMinBreakPoint {
+          width: 4.5rem;
+        }
+      }
+      #track {
+        width: 4.25rem;
+        @include mdMinBreakPoint {
+          width: 5.25rem;
+        }
+      }
+      #package {
+        height: 3.75rem;
+        @include mdMinBreakPoint {
+          height: 4.5rem;
+        }
+      }
+      #map {
+        height: 3.5rem;
+        @include mdMinBreakPoint {
+          height: 4.5rem;
+        }
+      }
+      #wholesale {
+        width: 4.5rem;
+        @include mdMinBreakPoint {
+          width: 5.5rem;
+        }
+      }
     }
     &__p {
       font-size: clamp(18px, 20em, 20px);

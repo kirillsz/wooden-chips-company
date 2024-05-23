@@ -1,6 +1,7 @@
 @use "../abstracts/" as *;
 .footer {
   &__main {
+    border-radius: 4px 4px 0 0;
     padding-top: clamp(1.5rem, 6.5vw, 3rem);
     padding-bottom: clamp(2.5rem, 10.55vw, 5rem);
   }

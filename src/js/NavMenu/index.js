@@ -1,8 +1,8 @@
 window.addEventListener("DOMContentLoaded", function () {
   const [...internalAnchors] =
     document.getElementsByClassName("anchor-internal");
-  const navMenu = document.querySelector(".qw-nav");
-  const navMenuList = document.querySelector(".qw-nav__list");
+  const navMenu = document.querySelector(".qw-menu");
+  const navMenuList = document.querySelector(".qw-nav");
   const navMenuToggleButton = document.querySelector(".qw-nav__toggle");
 
   function handleMenuShow() {

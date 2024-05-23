@@ -36,7 +36,7 @@ body {
     background-color: inherit;
     transition: opacity 1s linear;
   }
-  &-nav {
+  &-menu {
     color: var(--color-light-300);
     z-index: 998;
     position: fixed;
@@ -49,6 +49,9 @@ body {
     @media (min-width: 769px) {
       display: none;
     }
+  }
+  &-nav {
+    background-color: #6d1f09;
     &__toggle {
       display: flex;
       align-items: center;
@@ -65,21 +68,24 @@ body {
       &__bar {
         transition: all 0.35s ease;
 
-        .qw-nav[data-hidden="false"] &:first-of-type {
+        .qw-menu[data-hidden="false"] &:first-of-type {
           transform: translate(0, 100%) rotate(45deg);
         }
-        .qw-nav[data-hidden="false"] &:last-of-type {
+        .qw-menu[data-hidden="false"] &:last-of-type {
           transform: translate(0, -115%) rotate(-45deg);
         }
       }
     }
     &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
       animation: fadeOut 0.25s ease;
-      padding: 1rem 0.75rem;
-      background-color: #6d1f09;
+      padding: 1rem;
     }
   }
 }
+
 .is_dragging {
   @media (pointer: fine) {
     cursor: grabbing;
