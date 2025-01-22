@@ -5,8 +5,8 @@ import"./index-CDBgxB4q.js";let Yu=769;const Ro=document.getElementById("entry__
     loop
     playsinline
   >
-  <source src="/videos/company-video.webm" type="video/webm">
-  <source src="/videos/company-video.mp4" type="video/mp4">
+  <source src="/wooden-chips-company/videos/company-video.webm" type="video/webm">
+  <source src="/wooden-chips-company/videos/company-video.mp4" type="video/mp4">
   </video>`),i.matches&&(Ro.innerHTML=`<video
     class="entry-background entry-background--video"
     autoplay
@@ -14,8 +14,8 @@ import"./index-CDBgxB4q.js";let Yu=769;const Ro=document.getElementById("entry__
     loop
     playsinline
   >
-  <source src="/videos/company-video-tablet.webm" type="video/webm">
-  <source src="/videos/company-video-tablet.mp4" type="video/mp4">
+  <source src="/wooden-chips-company/videos/company-video-tablet.webm" type="video/webm">
+  <source src="/wooden-chips-company/videos/company-video-tablet.mp4" type="video/mp4">
   </video>`)}Ac.addEventListener("change",bc);bc(Ac);function Co(i,t){for(var e=0;e<t.length;e++){var n=t[e];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(i,n.key,n)}}function ju(i,t,e){return t&&Co(i.prototype,t),e&&Co(i,e),Object.defineProperty(i,"prototype",{writable:!1}),i}/*!
  * Splide.js
  * Version  : 4.1.4
