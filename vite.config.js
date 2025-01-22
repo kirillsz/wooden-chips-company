@@ -3,6 +3,7 @@ import { resolve } from "path";
 import eslint from "vite-plugin-eslint";
 
 export default defineConfig({
+  base: "/wooden-chips-company/",
   plugins: [
     eslint({
       cache: false,
