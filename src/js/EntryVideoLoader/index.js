@@ -12,8 +12,8 @@ function handleResize(e) {
     loop
     playsinline
   >
-  <source src="/videos/company-video.webm" type="video/webm">
-  <source src="/videos/company-video.mp4" type="video/mp4">
+  <source src="/wooden-chips-company/videos/company-video.webm" type="video/webm">
+  <source src="/wooden-chips-company/videos/company-video.mp4" type="video/mp4">
   </video>`;
   }
   if (e.matches) {
@@ -24,8 +24,8 @@ function handleResize(e) {
     loop
     playsinline
   >
-  <source src="/videos/company-video-tablet.webm" type="video/webm">
-  <source src="/videos/company-video-tablet.mp4" type="video/mp4">
+  <source src="/wooden-chips-company/videos/company-video-tablet.webm" type="video/webm">
+  <source src="/wooden-chips-company/videos/company-video-tablet.mp4" type="video/mp4">
   </video>`;
   }
 }
